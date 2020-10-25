@@ -29,7 +29,7 @@ const Dashboard = () => {
   return (
     <Page
       className={classes.root}
-      title="Tellor Dashboard"
+      title="Tellor Tracker"
     >
       <Container maxWidth={false}>
         <Grid
