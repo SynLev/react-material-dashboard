@@ -1,9 +1,9 @@
 {
-  "short_name": "Tellor Tracker",
-  "name": "Tellor Tracker",
+  "short_name": "SynLev Tracker",
+  "name": "SynLev Tracker",
   "icons": [
     {
-      "src": "images/tellor_logo_no_text.png",
+      "src": "images/synlev_logo.jpg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }

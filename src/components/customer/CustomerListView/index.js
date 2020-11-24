@@ -4,7 +4,7 @@ import {
   Container,
   makeStyles
 } from '@material-ui/core';
-import Page from 'src/components/Page';
+import Page from 'src/layouts/Page';
 import Results from './Results';
 import Toolbar from './Toolbar';
 import data from './data';
@@ -25,7 +25,7 @@ const CustomerListView = () => {
   return (
     <Page
       className={classes.root}
-      title="Customers"
+      title="3X ETH-USD"
     >
       <Container maxWidth={false}>
         <Toolbar />

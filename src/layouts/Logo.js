@@ -3,10 +3,10 @@ import React from 'react';
 const Logo = (props) => {
   return (
     <img
-      height={40}
-      width={40}
+      height={60}
+      width={60}
       alt="Logo"
-      src="/static/images/tellor_logo_no_text.png"
+      src="/static/images/synlev_logo.jpg"
       {...props}
     />
   );

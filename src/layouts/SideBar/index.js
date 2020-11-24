@@ -8,38 +8,26 @@ import {
   List,
   makeStyles
 } from '@material-ui/core';
-import {
-  AlertCircle as AlertCircleIcon,
-  BarChart as BarChartIcon,
-  ShoppingBag as ShoppingBagIcon,
-  Users as UsersIcon
-} from 'react-feather';
 import NavItem from './NavItem';
 
-const items = [
+const subItems = [
+  {
+    href: '/app/3XETHUSD',
+    title: '3X ETH-USD',
+  },
+  {
+    href: '',
+    title: 'Coming Soon...',
+  },
+];
+const headerItems = [
   {
     href: '/app/dashboard',
-    icon: BarChartIcon,
-    title: 'Dashboard'
+    title: 'Dashboard',
   },
-  {
-    href: '/app/customers',
-    icon: UsersIcon,
-    title: 'Customers'
-  },
-  {
-    href: '/app/products',
-    icon: ShoppingBagIcon,
-    title: 'Products'
-  },
-  {
-    href: '/404',
-    icon: AlertCircleIcon,
-    title: 'Error'
-  }
 ];
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   mobileDrawer: {
     width: 256
   },
@@ -52,6 +40,17 @@ const useStyles = makeStyles(() => ({
     cursor: 'pointer',
     width: 64,
     height: 64
+  },
+  divider: {
+    color: theme.palette.primary.secondary,
+    fontWeight: theme.typography.fontWeightMedium,
+    justifyContent: 'flex-start',
+    letterSpacing: 0,
+    padding: '20px 8px 10px 8px',
+    textTransform: 'none',
+    width: '100%',
+    fontFamily: 'Roboto',
+    fontSize: '14px',
   }
 }));
 
@@ -74,12 +73,19 @@ const NavBar = ({ onMobileClose, openMobile }) => {
     >
       <Box p={2}>
         <List>
-          {items.map((item) => (
+          {headerItems.map((item) => (
             <NavItem
               href={item.href}
               key={item.title}
               title={item.title}
-              icon={item.icon}
+            />
+          ))}
+          <h3 className={classes.divider}>Leveraged Pairs</h3>
+          {subItems.map((item) => (
+            <NavItem
+              href={item.href}
+              key={item.title}
+              title={item.title}
             />
           ))}
         </List>

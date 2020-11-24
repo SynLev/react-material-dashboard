@@ -7,7 +7,7 @@ import {
   Toolbar,
   makeStyles
 } from '@material-ui/core';
-import Logo from 'src/components/Logo';
+import Logo from 'src/layouts/Logo';
 
 const useStyles = makeStyles(({
   root: {},
@@ -18,7 +18,6 @@ const useStyles = makeStyles(({
 
 const TopBar = ({ className, ...rest }) => {
   const classes = useStyles();
-
   return (
     <AppBar
       className={clsx(classes.root, className)}
